@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/TWU_Biblioteca-master/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/TWU_Biblioteca-master/src" />
+      <root url="file://$PROJECT_DIR$/TWU_Biblioteca-master/test" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/TWU_Biblioteca-master/lib" recursive="false" />
+  </library>
+</component>

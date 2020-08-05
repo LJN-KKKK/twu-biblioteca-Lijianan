@@ -8,6 +8,8 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         System.out.println(showWelcomeMessage());
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.showMainMenu();
         BookList bookList = new BookList();
         System.out.println(bookList.showListOfBooks());
         bookList.showBooksInfo();

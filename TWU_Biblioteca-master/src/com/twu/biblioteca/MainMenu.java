@@ -17,6 +17,9 @@ public class MainMenu {
         optionsList.add("List of movies");
         optionsList.add("Checkout movies");
         optionsList.add("Return movies");
+        optionsList.add("Log in");
+        optionsList.add("Log out");
+        optionsList.add("User Information");
         optionsList.add("Quit");
     }
 

@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     private ArrayList<Book> books;
+    private static UserManagement userManagement = new UserManagement();
 
     public static void main(String[] args) {
         System.out.println(showWelcomeMessage());
@@ -51,7 +52,19 @@ public class BibliotecaApp {
                         mainMenu.returnMovies(option.nextInt());
                         mainMenu.showMainMenu();
                         break;
-                    case 7://quit
+                    case 7://log in
+                        userManagement.logIn();
+                        mainMenu.showMainMenu();
+                        break;
+                    case 8://log out
+                        userManagement.logOut();
+                        mainMenu.showMainMenu();
+                        break;
+                    case 9://user information
+                        userManagement.showUserInfo();
+                        mainMenu.showMainMenu();
+                        break;
+                    case 10://quit
                         flag=false;
                         mainMenu.quitApp();
                         break;

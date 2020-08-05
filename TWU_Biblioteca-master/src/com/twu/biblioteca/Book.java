@@ -5,15 +5,14 @@ public class Book {
     private String title;
     private String author;
     private String publishYear;
+    private boolean isCbeckout;
 
-    public Book(String title) {
-        this(title, "", "");
-    }
 
-    public Book(String title, String author, String publishYear) {
+    public Book(String title, String author, String publishYear, boolean isCbeckout) {
         this.title = title;
         this.author = author;
         this.publishYear = publishYear;
+        this.isCbeckout = isCbeckout;
     }
 
     public String getTitle() {
@@ -26,5 +25,9 @@ public class Book {
 
     public String getPublishYear() {
         return publishYear;
+    }
+
+    public boolean isCheckOut() {
+        return isCbeckout;
     }
 }

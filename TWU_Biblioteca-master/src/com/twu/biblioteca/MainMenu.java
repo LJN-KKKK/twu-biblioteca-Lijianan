@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainMenu {
 
@@ -10,6 +11,8 @@ public class MainMenu {
     public MainMenu() {
         optionsList = new ArrayList<>();
         optionsList.add("List of books");
+        optionsList.add("Checkout books");
+        optionsList.add("Quit");
     }
 
     public void showMainMenu() {
@@ -26,5 +29,17 @@ public class MainMenu {
 
     public void showQuitMes(){
         System.out.println("Goodbye!");
+    }
+
+    public void showCheckoutBookMes(){
+        System.out.println("Please select the book you want to checkout:");
+        Scanner bookin = new Scanner(System.in);
+        int index = bookin.nextInt()-1;
+        if(index>0 && index<=bookList.getSize() && bookList.getBook(index).isCheckOut()==true){
+            System.out.println("Thank you! Enjoy the book.");
+        }
+        else {
+            System.out.println("Sorry,that book is not available!");
+        }
     }
 }

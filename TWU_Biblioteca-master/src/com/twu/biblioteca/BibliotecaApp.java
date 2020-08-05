@@ -20,7 +20,12 @@ public class BibliotecaApp {
                     case 1://list
                         mainMenu.showBookList();
                         break;
-                    case 2://quit
+                    case 2://check out book
+                        mainMenu.showBookList();
+                        mainMenu.showCheckoutBookMes();
+                        mainMenu.showMainMenu();
+                        break;
+                    case 3://quit
                         flag=false;
                         mainMenu.showQuitMes();
                         break;

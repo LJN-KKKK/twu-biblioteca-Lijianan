@@ -16,8 +16,8 @@ public class BookList {
     public String showListOfBooks() {
         StringBuffer books = new StringBuffer();
 
-        for(Book b : bookList) {
-            books.append(b.getTitle() + "\n");
+        for(Book book : bookList) {
+            books.append(book.getTitle() + "\n");
         }
 
         return books.toString().trim();

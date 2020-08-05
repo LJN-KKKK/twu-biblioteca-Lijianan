@@ -1,17 +1,16 @@
 package com.twu.biblioteca;
 
-public class Book {
-
+public class Movie {
     private String title;
-    private String author;
-    private String publishYear;
+    private String director;
+    private String rating;
     private boolean isCheckout;
 
 
-    public Book(String title, String author, String publishYear, boolean isCheckout) {
+    public Movie(String title, String director, String rating, boolean isCheckout) {
         this.title = title;
-        this.author = author;
-        this.publishYear = publishYear;
+        this.director = director;
+        this.rating = rating;
         this.isCheckout = isCheckout;
     }
 
@@ -19,18 +18,18 @@ public class Book {
         return title;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getDirector() {
+        return director;
     }
 
-    public String getPublishYear() {
-        return publishYear;
+    public String getRating() {
+        return rating;
     }
 
     public boolean isCheckOut() {
         return isCheckout;
     }
-    
+
     public void setCheckout(boolean isCheckout){
         this.isCheckout = isCheckout;
     }

@@ -10,7 +10,7 @@ public class BookList {
     public BookList(){
         boolean add = bookList.add(new Book("Book A", "AAA", "2022",true));
         bookList.add(new Book("Book B", "BBB", "2036",true));
-        bookList.add(new Book("Book C", "CCC", "2033",true));
+        bookList.add(new Book("Book C", "CCC", "2033",false));
     }
 
     public String showListOfBooks() {

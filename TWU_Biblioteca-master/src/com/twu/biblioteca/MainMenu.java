@@ -18,7 +18,7 @@ public class MainMenu {
 
     public void showMainMenu() {
         for(int i = 0; i < optionsList.size(); i++) {
-            System.out.println((i+1) + ". " + optionsList.get(i));
+            System.out.println((i+1) + "." + optionsList.get(i));
         }
     }
     public void showBookList(){
@@ -28,16 +28,13 @@ public class MainMenu {
         System.out.println("Please select a valid option!");
     }
 
-    public void showQuitMes(){
+    public void quitApp(){
         System.out.println("Goodbye!");
     }
 
-    public void showCheckoutBookMes(){
-        System.out.println("Please select the book you want to checkout:");
-        Scanner bookin = new Scanner(System.in);
-        int index = bookin.nextInt()-1;
-        Book book = bookList.getBook(index);
-        if(index>0 && index<=bookList.getSize() && book.isCheckOut()==true){
+    public void checkoutBooks(int index){
+        if(index>0 && index<=bookList.getSize() && bookList.getBook(index-1).isCheckOut()==true){
+            Book book = bookList.getBook(index-1);
             System.out.println("Thank you! Enjoy the book.");
             book.setCbeckout(false);
         }
@@ -46,17 +43,15 @@ public class MainMenu {
         }
     }
 
-    public void showReturnBook(){
-        System.out.println("Enter the number of the book you want to return:");
-        Scanner rebook = new Scanner(System.in);
-        int index = rebook.nextInt()-1;
-        Book book = bookList.getBook(index);
-        if(index>0 && index<=bookList.getSize() && book.isCheckOut()==true){
-            System.out.println("That is not a valid book to return.");
-        }
-        else{
+    public void returnBooks(int index){
+        if(index>0 && index<=bookList.getSize() && bookList.getBook(index-1).isCheckOut()==false){
+            Book book = bookList.getBook(index-1);
             System.out.println("Thank you for returning the book.");
             book.setCbeckout(true);
         }
+        else{
+            System.out.println("That is not a valid book to return.");
+        }
     }
+
 }

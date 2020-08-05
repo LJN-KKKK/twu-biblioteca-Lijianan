@@ -12,29 +12,33 @@ public class BibliotecaApp {
         MainMenu mainMenu = new MainMenu();
         mainMenu.showMainMenu();
 
-        Scanner in = new Scanner(System.in);
+        Scanner option = new Scanner(System.in);
         boolean flag=true;
         while (flag){
-            if(in.hasNext()){
-                switch (in.nextInt()){
-                    case 1://list
+            if(option.hasNext()){
+                switch (option.nextInt()){
+                    case 1://show BookList
                         mainMenu.showBookList();
                         break;
-                    case 2://check out book
+                    case 2://checkout books
+                        System.out.println("Please select the book you want to checkout:");
                         mainMenu.showBookList();
-                        mainMenu.showCheckoutBookMes();
+                        option = new Scanner(System.in);
+                        mainMenu.checkoutBooks(option.nextInt());
                         mainMenu.showMainMenu();
                         break;
-                    case 3://return a book
+                    case 3://return books
+                        System.out.println("Please select the book you want to return:");
                         mainMenu.showBookList();
-                        mainMenu.showReturnBook();
+                        option = new Scanner(System.in);
+                        mainMenu.returnBooks(option.nextInt());
                         mainMenu.showMainMenu();
                         break;
                     case 4://quit
                         flag=false;
-                        mainMenu.showQuitMes();
+                        mainMenu.quitApp();
                         break;
-                    default:
+                    default://invalid input
                         mainMenu.showInvalidInput();
                         break;
                 }

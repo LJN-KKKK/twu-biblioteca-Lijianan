@@ -2,6 +2,7 @@
   <library name="src">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/TWU_Biblioteca-master/lib" />
+      <root url="file://$PROJECT_DIR$/TWU_Biblioteca-master" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

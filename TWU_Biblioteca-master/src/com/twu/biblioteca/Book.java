@@ -30,4 +30,8 @@ public class Book {
     public boolean isCheckOut() {
         return isCbeckout;
     }
+
+    public void setCbeckout(boolean isCbeckout){
+        this.isCbeckout = isCbeckout;
+    }
 }

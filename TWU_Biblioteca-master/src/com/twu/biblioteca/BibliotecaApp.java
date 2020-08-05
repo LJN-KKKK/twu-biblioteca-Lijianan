@@ -25,7 +25,12 @@ public class BibliotecaApp {
                         mainMenu.showCheckoutBookMes();
                         mainMenu.showMainMenu();
                         break;
-                    case 3://quit
+                    case 3://return a book
+                        mainMenu.showBookList();
+                        mainMenu.showReturnBook();
+                        mainMenu.showMainMenu();
+                        break;
+                    case 4://quit
                         flag=false;
                         mainMenu.showQuitMes();
                         break;

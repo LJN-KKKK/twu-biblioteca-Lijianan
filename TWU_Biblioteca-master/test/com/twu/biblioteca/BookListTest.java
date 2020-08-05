@@ -24,7 +24,7 @@ public class BookListTest {
     }
 
     @Test
-    public void showBooksInfoInfoTest() {
+    public void showBooksInfoTest() {
         BookList bookList = new BookList();
         bookList.showBooksInfo();
         assertEquals("Book A | AAA | 2022\r\n" +

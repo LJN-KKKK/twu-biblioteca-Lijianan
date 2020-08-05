@@ -36,7 +36,7 @@ public class MainMenu {
         if(index>0 && index<=bookList.getSize() && bookList.getBook(index-1).isCheckOut()==true){
             Book book = bookList.getBook(index-1);
             System.out.println("Thank you! Enjoy the book.");
-            book.setCbeckout(false);
+            book.setCheckout(false);
         }
         else {
             System.out.println("Sorry,that book is not available!");
@@ -47,7 +47,7 @@ public class MainMenu {
         if(index>0 && index<=bookList.getSize() && bookList.getBook(index-1).isCheckOut()==false){
             Book book = bookList.getBook(index-1);
             System.out.println("Thank you for returning the book.");
-            book.setCbeckout(true);
+            book.setCheckout(true);
         }
         else{
             System.out.println("That is not a valid book to return.");

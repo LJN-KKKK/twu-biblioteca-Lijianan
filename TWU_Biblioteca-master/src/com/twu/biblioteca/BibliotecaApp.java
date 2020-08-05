@@ -8,14 +8,13 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         System.out.println(showWelcomeMessage());
-        BookList bList = new BookList();
-        System.out.println(bList.showListOfBooks());
+        BookList bookList = new BookList();
+        System.out.println(bookList.showListOfBooks());
+        bookList.showBooksInfo();
     }
 
     public static String showWelcomeMessage() {
         return "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
     }
-
-
 
 }

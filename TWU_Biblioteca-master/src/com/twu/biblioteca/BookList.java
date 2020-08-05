@@ -14,12 +14,18 @@ public class BookList {
     }
 
     public String showListOfBooks() {
-        StringBuffer bookListAsText = new StringBuffer();
+        StringBuffer books = new StringBuffer();
 
         for(Book b : bookList) {
-            bookListAsText.append(b.getTitle() + "\n");
+            books.append(b.getTitle() + "\n");
         }
 
-        return bookListAsText.toString().trim();
+        return books.toString().trim();
+    }
+
+    public void showBooksInfo() {
+        for(Book book : bookList) {
+            System.out.println(book.getTitle() + " | " + book.getAuthor() + " | " + book.getPublishYear());
+        }
     }
 }

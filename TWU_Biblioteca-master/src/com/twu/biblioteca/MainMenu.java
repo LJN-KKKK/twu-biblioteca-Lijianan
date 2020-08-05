@@ -7,12 +7,16 @@ public class MainMenu {
 
     private ArrayList<String> optionsList;
     private BookList bookList=new BookList();
+    private MovieList movieList=new MovieList();
 
     public MainMenu() {
         optionsList = new ArrayList<>();
         optionsList.add("List of books");
         optionsList.add("Checkout books");
         optionsList.add("Return books");
+        optionsList.add("List of movies");
+        optionsList.add("Checkout movies");
+        optionsList.add("Return movies");
         optionsList.add("Quit");
     }
 
@@ -21,9 +25,15 @@ public class MainMenu {
             System.out.println((i+1) + "." + optionsList.get(i));
         }
     }
+
     public void showBookList(){
         bookList.showBooksInfo();
     }
+
+    public void showMovieList(){
+        movieList.showMoviesInfo();
+    }
+
     public void showInvalidInput(){
         System.out.println("Please select a valid option!");
     }
@@ -54,4 +64,25 @@ public class MainMenu {
         }
     }
 
+    public void checkoutMovies(int index){
+        if(index>0 && index<=movieList.getSize() && movieList.getMovie(index-1).isCheckOut()==true){
+            Movie movie = movieList.getMovie(index-1);
+            System.out.println("Thank you! Enjoy the movie.");
+            movie.setCheckout(false);
+        }
+        else {
+            System.out.println("Sorry,that movie is not available!");
+        }
+    }
+
+    public void returnMovies(int index){
+        if(index>0 && index<=movieList.getSize() && movieList.getMovie(index-1).isCheckOut()==false){
+            Movie movie = movieList.getMovie(index-1);
+            System.out.println("Thank you for returning the movie.");
+            movie.setCheckout(true);
+        }
+        else{
+            System.out.println("That is not a valid movie to return.");
+        }
+    }
 }

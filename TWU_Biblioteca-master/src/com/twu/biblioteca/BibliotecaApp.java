@@ -34,7 +34,24 @@ public class BibliotecaApp {
                         mainMenu.returnBooks(option.nextInt());
                         mainMenu.showMainMenu();
                         break;
-                    case 4://quit
+                    case 4://show MovieList
+                        mainMenu.showMovieList();
+                        break;
+                    case 5://checkout movies
+                        System.out.println("Please select the movie you want to checkout:");
+                        mainMenu.showMovieList();
+                        option = new Scanner(System.in);
+                        mainMenu.checkoutMovies(option.nextInt());
+                        mainMenu.showMainMenu();
+                        break;
+                    case 6://return movies
+                        System.out.println("Please select the movie you want to return:");
+                        mainMenu.showMovieList();
+                        option = new Scanner(System.in);
+                        mainMenu.returnMovies(option.nextInt());
+                        mainMenu.showMainMenu();
+                        break;
+                    case 7://quit
                         flag=false;
                         mainMenu.quitApp();
                         break;

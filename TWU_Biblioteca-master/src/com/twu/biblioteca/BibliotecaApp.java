@@ -53,7 +53,12 @@ public class BibliotecaApp {
                         mainMenu.showMainMenu();
                         break;
                     case 7://log in
-                        userManagement.logIn();
+                        System.out.println("Type you username:");
+                        Scanner s1 = new Scanner(System.in);
+                        String name = s1.nextLine();
+                        System.out.println("Type you password:");
+                        String password = s1.nextLine();
+                        userManagement.logIn(name, password);
                         mainMenu.showMainMenu();
                         break;
                     case 8://log out

@@ -25,7 +25,10 @@ public class MainMenuTest {
                         "4.List of movies\r\n"+
                         "5.Checkout movies\r\n"+
                         "6.Return movies\r\n"+
-                        "7.Quit\r\n", output.toString());
+                        "7.Log in\r\n"+
+                        "8.Log out\r\n"+
+                        "9.User Information\r\n"+
+                        "10.Quit\r\n", output.toString());
     }
 
     @Test //invalid input test

@@ -17,21 +17,19 @@ public class UserManagement {
         return curUser != null;
     }
 
-    public void logIn(){
+    public void logIn(String name, String password){
         if(isLoggedIn()){
             System.out.println("Already logged in.");
             return;
         }
 
-        System.out.println("Type you username");
-        Scanner s1 = new Scanner(System.in);
-        String name = s1.nextLine();
+//        System.out.println("Type you username");
+//        Scanner s1 = new Scanner(System.in);
+//        String name = s1.nextLine();
         boolean userExist = false;
-
-        System.out.println("Type you password");
-        Scanner s2 = new Scanner(System.in);
-        String password = s2.nextLine();
-
+//        System.out.println("Type you password");
+//        String password = s1.nextLine();
+//        s1.close();
         for(User u:userList){
             if(u.getName().equals(name) && u.getPassword().equals(password)){
                 userExist = true;
@@ -42,7 +40,7 @@ public class UserManagement {
             System.out.println("Wrong username or password.");
         }
         else{
-            System.out.println("Log in successfully.");
+            System.out.println("Logged in successfully.");
         }
 
     }
@@ -53,15 +51,17 @@ public class UserManagement {
             return;
         }
         curUser=null;
-        System.out.println("Log out successfully");
+        System.out.println("Logged out successfully.");
     }
 
     public void showUserInfo(){
         if(!isLoggedIn()){
-            System.out.println("Not logged in");
+            System.out.println("Not logged in.");
             return;
         }
         curUser.printUserInfo();
     }
-
+     public User getCurUser(){
+        return curUser;
+     }
 }

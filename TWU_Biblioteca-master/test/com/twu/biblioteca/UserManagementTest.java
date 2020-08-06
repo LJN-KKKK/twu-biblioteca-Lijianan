@@ -37,13 +37,13 @@ public class UserManagementTest {
         assertFalse(userManagement.isLoggedIn());
     }
 
-    @Test //re log in
+    @Test ;//re log in
     public void testReLogIn(){
         UserManagement userManagement = new UserManagement();
         userManagement.logIn("User A","aaa");
         userManagement.logIn("User A","aaa");
         assertEquals("Logged in successfully.\r\n"
-                +"Already logged in.\r\n", output.toString());
+                +"Already logged in.\r\n", output.toString())
         assertTrue(userManagement.isLoggedIn());
     }
 

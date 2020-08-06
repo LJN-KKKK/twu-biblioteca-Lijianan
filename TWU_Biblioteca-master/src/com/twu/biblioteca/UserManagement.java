@@ -23,13 +23,7 @@ public class UserManagement {
             return;
         }
 
-//        System.out.println("Type you username");
-//        Scanner s1 = new Scanner(System.in);
-//        String name = s1.nextLine();
         boolean userExist = false;
-//        System.out.println("Type you password");
-//        String password = s1.nextLine();
-//        s1.close();
         for(User u:userList){
             if(u.getName().equals(name) && u.getPassword().equals(password)){
                 userExist = true;
